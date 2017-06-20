@@ -12,9 +12,9 @@ namespace WebApplication1.Controllers
 {
     public class ValuesController : ApiController
     {
-        static CloudQueue cloudQueue;
+        //static CloudQueue cloudQueue;
 
-        public void Connect()
+        /*public void Connect()
         {
             var connectionString = "DefaultEndpointsProtocol=https;AccountName=nuvempuc;AccountKey=5Xl8yKJmsI0Ud0+GiZEqhydILreQIXxOLJqhcrl81xp7PLIpQJK836/cb2DfTmPREDkkdxjNw9HJeuwFCDcF6Q==;EndpointSuffix=core.windows.net";
 
@@ -40,6 +40,7 @@ namespace WebApplication1.Controllers
 
             cloudQueue.AddMessage(message);
         }
+        */
 
         // GET api/values
         public IEnumerable<string> Get()
@@ -56,8 +57,8 @@ namespace WebApplication1.Controllers
         // POST api/values
         public string Post([FromBody]string value)
         {
-            Connect();
-            SendMessage(value);
+            //Connect();
+            //SendMessage(value);
             return "Post done!";
         }
 
