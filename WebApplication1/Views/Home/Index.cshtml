@@ -1,12 +1,31 @@
 ﻿<div class="jumbotron">
     <h1>API PRODUTOR - CONSUMIDOR</h1>
 </div>
+<!--
 <div class="row">
-    <form>
+    <form sourceindex="1">
         <div>
             <h2>Write a message:</h2>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <textarea class="form-control" rows="5" id="message" sourceindex="2"></textarea>
+            <button class="btn btn-primary" sourceindex="3" id="submit">Save</button>
+            <label id="result"></label>
         </div>
     </form>
 </div>
+-->
+
+<script type="text/javascript">
+    $.ajax({
+        url: baseUrl + "api/User/LoginUser",
+        type: "Post",
+        contentType: 'application/json; charset=utf-8',
+        data: JSON.stringify({ email: "xyz@gmail.com", password: "password", authkey: "1234" }),
+        dataType: 'json',
+        success: function (data) {
+            // Do Soemthing
+        },
+        fail: function (data) {
+            // Failed
+        }
+    });
+</script>
