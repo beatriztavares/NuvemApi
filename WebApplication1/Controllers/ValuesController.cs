@@ -24,7 +24,7 @@ namespace WebApplication1.Controllers
         // POST api/values
         public string Post([FromBody]string message)
         {
-            return "Post! "+ message.ToString;
+            return "Post! "+ message;
         }
 
         // PUT api/values/5
