@@ -23,14 +23,14 @@ namespace WebApplication1.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public string Post([FromBody]string value, string message)
         {
+            return "Post: " + message;
         }
 
         // PUT api/values/5
-        public string Put(int id, [FromBody]string value, string message)
+        public void Put(int id, [FromBody]string value)
         {
-            return "Post: " + message;
         }
 
         // DELETE api/values/5
