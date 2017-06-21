@@ -22,8 +22,9 @@ namespace WebApplication1.Controllers
         }
 
         // POST api/values
-        public string Post([FromBody]string message)
+        public string Post(dynamic DynamicClass)
         {
+            string message = JsonConvert.SerializeObject(DynamicClass);
             return "Post! "+ message;
         }
 
