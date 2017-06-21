@@ -19,7 +19,6 @@ using WebApplication1.Results;
 
 namespace WebApplication1.Controllers
 {
-    [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
