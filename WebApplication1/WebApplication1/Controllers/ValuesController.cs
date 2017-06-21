@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace WebApplication1.Controllers
 {
-   
+    [RoutePrefix("api/values")]
     public class ValuesController : ApiController
     {
         static CloudQueue cloudQueue;
@@ -51,8 +51,10 @@ namespace WebApplication1.Controllers
             return "value";
         }
 
+        [Route("add")]
+        [HttpPost]
         // POST api/values
-        public string Post([FromBody]string value)
+        public string add([FromBody]string value)
         {
             var message = new CloudQueueMessage(value);
 
