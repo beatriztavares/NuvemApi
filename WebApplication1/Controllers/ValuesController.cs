@@ -4,6 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.Diagnostics;
+using Microsoft.WindowsAzure.ServiceRuntime;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Queue;
 
 namespace WebApplication1.Controllers
 {
@@ -24,6 +29,7 @@ namespace WebApplication1.Controllers
         // POST api/values
         public string Post([FromBody]string value, string message)
         {
+
             return "Post! " + message;
         }
 
